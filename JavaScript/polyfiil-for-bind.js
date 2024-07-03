@@ -18,13 +18,12 @@ fullName("Bhandara");
 
 // Polyfill for bind 
 
-Function.prototype.myBind = function(...args){
+Function.prototype.myBind = function(obj, ...args){
 
-    let obj = this; //in this case it will refer to printFullName as it is calling bind
-    let params = args.slice(1);
+    let fucn = this; //in this case it will refer to printFullName as it is calling bind
 
     return function(...args2){
-        obj.apply(args[0], [...params, ...args2 ]);
+        fucn.apply(obj, [...args, ...args2 ]);
     }
 }
 
