@@ -1,2 +1,2 @@
 # Interview Preparation
-Resources and practice for technical interview prep.
+Resources and practice for technical interview preparation.
